@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Blending Data-Driven Priors in Dynamic Games </title>
+<!--    <meta property="og:image" content="img/hri.webp" />-->
+    <meta name="description" content="Blending Data-Driven Priors in Dynamic Games">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="icon" href="img/hri_transparent.png">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+	
+    <style>
+        .nav-pills {
+          position: relative;
+          display: inline;
+        }
+        .imtip {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        video {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="row mt-4">
+            <h2 class="col-md-12 text-center">
+                Blending Data-Driven Priors in Dynamic Games</br>
+            </h2>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <br>
+                    <li><a href="https://jlidard.github.io">Justin Lidard*</a></li>
+                    <li><a href="https://haiminhu.org/">Haimin Hu*</a></li>
+                    <li><a href="https://zzx9636.github.io/">Zixu Zhang</a></li>
+                    <li><a href="https://aasherh.github.io/">Asher Hancock</a></li>
+                    <li><a href="https://www.linkedin.com/in/albert-gim%C3%B3-contreras-a0894b25b?originalSubdomain=es">Albert Gimó Contreras</a></li>
+                    <li><a href="https://www.linkedin.com/in/vikash-modi/">Vikash Modi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <br>
+                    <li><a href="https://jadecastro.github.io/">Jonathan DeCastro</a></li>
+                    <li><a href="https://scholar.google.com/citations?user=qqMpCwYAAAAJ&hl=en">Deepak Gopinath</a></li>
+                    <li><a href="http://people.csail.mit.edu/rosman/">Guy Rosman</a></li>
+                    <li><a href="https://naomi.princeton.edu/">Naomi Leonard</a></li>
+                    <li><a href="https://mariasantos.me/">María Santos</a></li>
+                    <li><a href="https://ece.princeton.edu/people/jaime-fernandez-fisac">Jaime Fernández Fisac</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+<!--            <div class="col-md-2 text-center">-->
+<!--                <a href="https://irom-lab.princeton.edu/">-->
+<!--                    <image src="img/irom_lab.png" height="35px", width="150px" ></image>-->
+<!--                </a>-->
+<!--            </div>-->
+            <div class="col-md-12 text-center">
+                <a href="https://www.princeton.edu/">
+                    <image src="img/PU1line.svg" height="55px"></image>
+                </a>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <h3 class="col-md-12 text-center">
+                RSS 2024 </br> </br>
+            </h3>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-2 text-center">
+                <a href="https://arxiv.org/pdf/2402.14174.pdf">
+                    <image src="img/paper.png" height="110px" width="85px"></image>
+                <h4><strong>Paper</strong></h4>
+                </a>
+            </div>
+            <!-- TODO -->
+            <div class="col-md-2 text-center">
+                <a href="https://github.com/SafeRoboticsLab/KLGame">
+                <image src="img/github.png"  height="110px"></image>
+                <h4><strong>Code</strong></h4>
+                </a>
+            </div>
+            <!-- For when we have folder ready -->
+            <!-- <div class="col-md-2 text-center">
+                <a href="https://drive.google.com/drive/folders/13qAaPCHEcx93BTcPwwXSITSm7LKsAohr?usp=sharing">
+                <image src="img/database.png"  height="110px"></image>
+                <h4><strong>
+                    Dataset
+                </strong></h4>
+                </a>
+            </div> -->
+        </div>
+
+
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 col-lg-8">
+                <h3 class="mt-4 mb-2">
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    As intelligent robots like autonomous vehicles become
+                    increasingly deployed in the presence of people, the extent to
+                    which these systems should leverage model-based game-theoretic
+                    planners versus data-driven policies for safe, interaction-aware
+                    motion planning remains an open question. Existing dynamic
+                    game formulations assume all agents are task-driven and behave
+                    optimally. However, in reality, humans tend to deviate from the
+                    decisions prescribed by these models, and their behavior is better
+                    approximated under a noisy-rational paradigm. In this work,
+                    we investigate a principled methodology to blend a data-driven
+                    reference policy with an optimization-based game-theoretic policy.
+                    We formulate KLGame, an algorithm for solving non-cooperative
+                    dynamic game with Kullback-Leibler (KL) regularization with
+                    respect to a general, stochastic, and possibly multi-modal reference
+                    policy. Our method incorporates, for each decision maker, a
+                    tunable parameter that permits modulation between task-driven
+                    and data-driven behaviors. We propose an efficient algorithm for
+                    computing multi-modal approximate feedback Nash equilibrium
+                    strategies of KLGame in real time. Through a series of simulated
+                    and real-world autonomous driving scenarios, we demonstrate
+                    that KLGame policies can more effectively incorporate guidance
+                    from the reference policy and account for noisily-rational human
+                    behaviors versus non-regularized baselines
+                </p>
+                <div class="col-md-12">
+                    <video id="v0" width="60%" preload="metadata" playsinline controls>
+                        <source src="videos/final_compressed.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- <p style="text-align:center;">
+                    <image src="img/fig1_rss_real_scenarios.png" width="75%"></image>
+                </p> -->
+
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 col-lg-8">
+                <h3 class="mt-4 mb-2">
+                    Contributions
+                    <!-- Goal -->
+                </h3>
+                <p class="text-justify">
+                    We introduce KLGame, a novel stochastic dynamic game
+                    that blends interaction-aware task optimization with
+                    closed-loop policy guidance via Kullback-Leibler (KL)
+                    regularization. We provide an in-depth analysis in the
+                    linear-quadratic (LQ) setting with Gaussian reference
+                    policies and show KLGame permits an analytical global
+                    feedback Nash equilibrium, which naturally generalizes
+                    the solution of the maximum-entropy game.
+
+                    We propose an efficient and scalable trajectory optimiza-
+                    tion algorithm for computing approximate feedback Nash
+                    equilibria of KLGame with general nonlinear dynamics,
+                    costs, and multi-modal reference policies. Experimental
+                    results on Waymo’s Open Motion Dataset demonstrate
+                    the efficacy of KLGame in leveraging data-driven priors
+                    compared to state-of-the-art methods.
+                </p>
+
+                <p style="text-align:center;">
+                    <image src="img/fig1_rss_real_scenarios.png" width="75%"></image>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 col-lg-8">
+                <h3 class="mt-4 mb-2">
+                    Approach
+                    <!-- This section needs to be rewritten soon -->
+                </h3>
+                <p class="text-justify">
+
+                    Our proposed approach can seamlessly integrate data-driven policies with optimization-based dynamic game solutions. 
+                    Data-driven behavior predictors, such as transformer-based methods, provide <em>marginal</em> (i.e., single-agent) priors
+                    for human motion prediction, but may struggle to model <em>closed-loop</em>, multi-agent interactions.
+                    <!-- RCIP builds upon statistical risk calibration (SRC) to formally quantify and bound multiple notions of
+                    risk in human-robot interaction (HRI).  Using a small set of calibration scenarios, RCIP computes step-wise prediction
+                    losses to form an aggregate emperical risk estimate. Using a risk limit, for each pair (λ,θ) of prediction thresholds
+                    and tunable model parameters, RCIP evaluates the hypothesis that the test set risk is above the limit.
+                    Thus, for all hypotheses that are rejected, the test set risk satisfies the threshold (with high probability). -->
+<!-- 
+                    Our proposed approach can seamlessly integrate data-driven
+                    policies with optimization-based dynamic game solutions.
+                    Data-driven behavior predictors, such as transformer-based methods,
+                    provide marginal (i.e., single-agent) priors for human motion
+                    prediction, but may struggle to model closed-loop, multi-agent
+                    interactions. Whereas our proposed method, KLGame, allows a robot
+                    to incorporate guidance from data-driven rollouts while performing
+                    online game-theoretic planning in closed-loop. KLGame uses
+                    a tunable parameter λ that modulates behaviors on a spectrum: λ = 0
+                    gives a deterministic dynamic game (task-optimal), and λ → ∞ gives
+                    multi-modal behavior cloning. We call this tunability policy blending. -->
+
+                </p>
+                <p class="text-justify">
+                    KLGame allows a robot to incorporate <em>guidance</em> from data-driven rollouts while 
+                    performing online game-theoretic planning in closed-loop. This method uses a <em>tunable</em> parameter <span>&lambda;</span> 
+                    that modulates behaviors on a spectrum: <span>&lambda;=0</span> gives a deterministic dynamic game (<em>task-optimal</em>), 
+                    and <span>&lambda;&rarr;&infin;</span> gives multi-modal behavior cloning. We call this tunability <em>policy blending</em>.
+                </p>
+
+                <p style="text-align:center;">
+                    <image src="img/fig2_master_simplified.png" width="100%"></image>
+<!--                    <embed type="application/pdf" src="img/figure1_tricolumn-compressed.pdf"></embed>-->
+                </p>
+                <!-- Put a better overview here -->
+                <p class="text-justify">
+                    KLGame incentivizes the trajectories of planning agents to not only optimize hand-crafted cost heuristics, but also to adhere to 
+                    a <em>reference policy</em>. In this work, we assume that the reference policy is distilled from data or expert knowledge, is stochastic,
+                    and may be multi-modal in general. In contrast to other integrated prediction and planning methods, KLGame (i) provides an analytically 
+                    and computationally sound methodology for planning under strategy uncertainty, exactly solving the regularized stochastic optimization problem; 
+                    and (ii) incorporates <em>tunable</em> multi-modal, data-driven motion predictions in the optimal policy through a scalar parameter, allowing 
+                    the planner to modulate between purely data-driven and purely optimal behaviors.
+                    <!-- TODO Figure highlighting all the experiments maybe?-->
+                </p>
+                                <p style="text-align:center;">
+                    <image src="img/scenario_3.png" width="100%"></image>
+<!--                    <embed type="application/pdf" src="img/figure1_tricolumn-compressed.pdf"></embed>-->
+                </p>
+                <p class="text-justify">
+                    We study the role of the reference policy in helping KLGame find diverse game solutions more amenable to execution than existing methods. 
+                    We compare our method against a mixture of deterministic, stochastic, and data-driven baselines on three simulated interaction scenarios with 
+                    nonconvex costs and mode uncertainty. 
+                </p>
+                <p class="text-justify">
+                    In the first experiment we show that mixing the game’s payoff with the expert’s reference policy allows the game solver to <em>break out of a suboptimal equilibrium</em>. 
+                    We then demonstrate that a blended multi-modal KLGame policy can balance between competitiveness and cautiousness in <em>fast and rivalrous</em> interactions such as car racing.
+                    Finally, we validate that the KLGame planner can integrates a state-of-the-art large-scale, data-driven behavior model with an optimization-based game policy - improving
+                    safety for complex tasks such as urban autonomous driving - <em>at scale</em>.
+                    
+                </p>
+
+            </div>
+        </div>
+
+<!--        <div class="row justify-content-md-center">-->
+<!--            <div class="col-md-10 col-lg-8">-->
+<!--                <h3 class="mt-4 mb-2">-->
+<!--                    TODO: bimanual videos-->
+<!--                </h3>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 col-lg-8">
+                <h3 class="mt-4 mb-2">
+                    Citation
+                </h3>
+                <pre><code class="codeblock">
+                    @article{lidard2024blending,
+                        title={Blending Data-Driven Priors in Dynamic Games},
+                        author={Lidard, Justin and Hu, Haimin and Hancock, Asher and Zhang, Zixu and Contreras, Albert Gim{\'o} and Modi, Vikash and
+                         DeCastro, Jonathan and Gopinath, Deepak and Rosman, Guy and Leonard, Naomi and Santos, Mar{\'i}a and Fisac, Jaime Fern{\'a}ndez},
+                        journal={arXiv preprint arXiv:2402.14174},
+                        year={2024}
+                      }
+                </code></pre>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
