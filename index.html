@@ -131,29 +131,7 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    As intelligent robots like autonomous vehicles become
-                    increasingly deployed in the presence of people, the extent to
-                    which these systems should leverage model-based game-theoretic
-                    planners versus data-driven policies for safe, interaction-aware
-                    motion planning remains an open question. Existing dynamic
-                    game formulations assume all agents are task-driven and behave
-                    optimally. However, in reality, humans tend to deviate from the
-                    decisions prescribed by these models, and their behavior is better
-                    approximated under a noisy-rational paradigm. In this work,
-                    we investigate a principled methodology to blend a data-driven
-                    reference policy with an optimization-based game-theoretic policy.
-                    We formulate KLGame, an algorithm for solving non-cooperative
-                    dynamic game with Kullback-Leibler (KL) regularization with
-                    respect to a general, stochastic, and possibly multi-modal reference
-                    policy. Our method incorporates, for each decision maker, a
-                    tunable parameter that permits modulation between task-driven
-                    and data-driven behaviors. We propose an efficient algorithm for
-                    computing multi-modal approximate feedback Nash equilibrium
-                    strategies of KLGame in real time. Through a series of simulated
-                    and real-world autonomous driving scenarios, we demonstrate
-                    that KLGame policies can more effectively incorporate guidance
-                    from the reference policy and account for noisily-rational human
-                    behaviors versus non-regularized baselines
+                    Recent advances in safe autonomy offer new opportunities for assisting humans in safety-critical, highly dynamic tasks such as motorsports. However, existing safe control algorithms predominantly focus on fully automated settings and often fail to meet key requirements in human–AI shared control domains---specifically, maintaining human agency and cooperating predictably. These requirements are crucial to mitigate the risk of ``automation surprise,'' wherein human operators may feel confused by the AI’s assistance. In this work, we propose a Human-Centered Safety Filter (HCSF) for shared autonomy, which builds on the principles of safe control to enhance system robustness without compromising human agency. Unlike human-agnostic safety filters that deliver abrupt, last-moment corrections, our HCSF employs a model-free safety formulation which smoothly and minimally modifies the driver’s actions. Combined with a safety-driven reinforcement learning approach, this model-free design scales to high-dimensional systems with unknown dynamics. We conduct a comprehensive human study of our HCSF in Assetto Corsa---a high-fidelity car racing simulator with black-box dynamics---to evaluate its robustness in ``driving on the edge'' scenarios. We also compare how human drivers perceive HCSF assistance relative to no assistance and to a conventional, human-agnostic safety filter. Our results, supported by statistical significance, show that 1) HCSF improves both robustness and user satisfaction without compromising human agency or comfort compared to having no filter at all, and 2) HCSF boosts human agency, comfort, and satisfaction while maintaining robustness relative to a conventional safety filter.
                 </p>
                 <div class="col-md-12">
                     <video id="v0" width="60%" preload="metadata" playsinline controls>
