@@ -163,33 +163,27 @@
 
         <div class="row justify-content-md-center">
             <div class="col-md-10 col-lg-8">
-                <h3 class="mt-4 mb-2">
-                    Contributions
-                    <!-- Goal -->
-                </h3>
-                <p class="text-justify">
-                    We introduce KLGame, a novel stochastic dynamic game
-                    that blends interaction-aware task optimization with
-                    closed-loop policy guidance via Kullback-Leibler (KL)
-                    regularization. We provide an in-depth analysis in the
-                    linear-quadratic (LQ) setting with Gaussian reference
-                    policies and show KLGame permits an analytical global
-                    feedback Nash equilibrium, which naturally generalizes
-                    the solution of the maximum-entropy game.
-
-                    We propose an efficient and scalable trajectory optimiza-
-                    tion algorithm for computing approximate feedback Nash
-                    equilibria of KLGame with general nonlinear dynamics,
-                    costs, and multi-modal reference policies. Experimental
-                    results on Waymo’s Open Motion Dataset demonstrate
-                    the efficacy of KLGame in leveraging data-driven priors
-                    compared to state-of-the-art methods.
-                </p>
-
-                <p style="text-align:center;">
-                    <image src="img/fig1_rss_real_scenarios.png" width="75%"></image>
-                </p>
-
+              <h3 class="mt-4 mb-2">Contributions</h3>
+          
+              <!-- Bullet‑point list of contributions -->
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  We introduce, to the best of our knowledge, the <strong>first fully model‑free control barrier function (CBF) safety filter</strong>.  
+                  We learn a neural safety value function through interactions with a black‑box system and, at deployment, enforce a safety constraint based on a novel state&ndash;action control barrier function (Q‑CBF) without any knowledge of system dynamics (e.g., control affine model).  
+                  Both the synthesis and deployment of our Q‑CBF are scalable to high‑dimensional systems and do not require any knowledge of their dynamics.
+                </li>
+                <li class="list-group-item">
+                  We build upon the learned Q‑CBF and demonstrate our HCSF in Assetto Corsa (AC), a high‑fidelity racing simulator with black‑box dynamics, where the filter is pushed to the limit against all potential failure modes by real human drivers with diverse skill levels.  
+                  To the best of our knowledge, this is the first time a safety filter has been synthesized, deployed, and evaluated in such a high‑dimensional, dynamic shared autonomy setting involving human operators.
+                </li>
+                <li class="list-group-item">
+                  We conduct an extensive in‑person user study with 83 human participants and conclude—with statistical significance in both trajectory data and human driver responses—that our HCSF considerably improves safety and user satisfaction without compromising human agency or comfort relative to having no safety filter.  
+                  Furthermore, when compared to a conventional safety filter, our HCSF offers significant gains in human agency, comfort, and overall satisfaction while maintaining at least the same level of robustness&mdash;if not exceeding it.
+                </li>
+              </ul>
+              <p style="text-align:center;">
+                <image src="img/fig1_rss_real_scenarios.png" width="75%"></image>
+              </p>
             </div>
         </div>
 
