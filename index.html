@@ -132,15 +132,13 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    Recent advances in safe autonomy offer new opportunities for assisting humans in safety-critical, highly dynamic tasks such as motorsports. 
-                    However, existing safe control algorithms predominantly focus on fully automated settings and often fail to meet key requirements in human–AI shared control domains&mdash;specifically, maintaining human agency and cooperating predictably. 
-                    These requirements are crucial to mitigate the risk of &ldquo;automation surprise,&rdquo; wherein human operators may feel confused by the AI’s assistance. 
-                    In this work, we propose a Human-Centered Safety Filter (HCSF) for shared autonomy, which builds on the principles of safe control to enhance system robustness without compromising human agency. 
-                    Unlike human-agnostic safety filters that deliver abrupt, last-moment corrections, our HCSF employs a model-free safety formulation which smoothly and minimally modifies the driver’s actions. 
-                    Combined with a safety-driven reinforcement learning approach, this model-free design scales to high-dimensional systems with unknown dynamics. 
-                    We conduct a comprehensive human study of our HCSF in Assetto Corsa&mdash;a high-fidelity car racing simulator with black-box dynamics&mdash;to evaluate its robustness in &ldquo;driving on the edge&rdquo; scenarios. 
-                    We also compare how human drivers perceive HCSF assistance relative to no assistance and to a conventional, human-agnostic safety filter. 
-                    Our results, supported by statistical significance, show that 1) HCSF improves both robustness and user satisfaction without compromising human agency or comfort compared to having no filter at all, and 2) HCSF boosts human agency, comfort, and satisfaction while maintaining robustness relative to a conventional safety filter.
+                    We propose a human-centered safety filter (HCSF) for shared autonomy that significantly enhances system safety without compromising human agency. 
+                    Our HCSF is built on a neural safety value function, which we first learn scalably through black-box interactions and then use at deployment to enforce a novel state&ndash;action control barrier function (Q-CBF) safety constraint.
+                    Since this Q-CBF safety filter does not require any knowledge of the system dynamics for both synthesis and runtime safety monitoring and intervention, our method applies readily to complex, black-box shared autonomy systems.
+                    Notably, our HCSF's CBF-based interventions modify the human's actions minimally and smoothly, avoiding the abrupt, last-moment corrections delivered by many conventional safety filters.
+                    We validate our approach in a comprehensive in-person user study using Assetto Corsa&mdash;a high-fidelity car racing simulator with black-box dynamics&mdash;to assess robustness in &ldquo;driving on the edge&rdquo; scenarios.
+                    We compare both trajectory data and drivers’ perceptions of our HCSF assistance against unassisted driving and a conventional safety filter.
+                    Experimental results show that 1) compared to having no assistance, our HCSF improves both safety and user satisfaction without compromising human agency or comfort, and 2) relative to a conventional safety filter, our proposed HCSF boosts human agency, comfort, and satisfaction while maintaining robustness.
                 </p>
                 <div class="col-md-12">
                     <video id="v0" width="60%" preload="metadata" playsinline controls>
