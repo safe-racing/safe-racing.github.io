@@ -182,3 +182,13 @@ pre.codegen {
   height: 150px;               /* uniform RSS height */ 
   width: auto;                /* preserves aspect ratio */ 
 }
+
+.section-title {
+  font-size: 1.75rem;     /* or whichever size you prefer */
+  font-weight: 700;       /* optional—makes them bold */
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: 'Lato', sans-serif;
+}
