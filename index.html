@@ -50,6 +50,7 @@
 
         <div class="my-4"></div>
         <div class="my-4"></div>
+        <div class="my-4"></div>
 
         <div class="row mt-4">
             <h2 class="col-md-12 text-center">
@@ -137,6 +138,23 @@
         <div class="row justify-content-md-center">
             <div class="col-md-10 col-lg-8">
                 <h3 class="mt-4 mb-2">
+                    TL;DR
+                </h3>
+                <p class="text-justify">
+                    We propose a <em>human-centered safety filter (HCSF)</em> for shared autonomy that significantly enhances system safety without compromising human agency. 
+                    Our HCSF is built upon a novel <em>state&ndash;action control barrier function (Q-CBF)</em> safety filter, which does not require any knowledge of the system dynamics for both synthesis and runtime safety enforcement.
+                </p>
+                <div class="col-md-12">
+                    <video id="v0" width="60%" preload="metadata" playsinline controls>
+                        <source src="videos/safety_with_agency_short_compressed.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 col-lg-8">
+                <h3 class="mt-4 mb-2">
                     Abstract
                 </h3>
                 <p class="text-justify">
@@ -162,11 +180,11 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                   We introduce, to the best of our knowledge, the <em>first fully model‑free control barrier function (CBF) safety filter</em>.  
-                  We learn a neural safety value function through interactions with a black‑box system and, at deployment, enforce a safety constraint based on a novel <em>state&ndash;action control barrier function (Q‑CBF)</em> without any knowledge of system dynamics (e.g., control affine model).  
+                  We learn a neural safety value function through interactions with a black‑box system and, at deployment, enforce a safety constraint based on a novel Q-CBF without any knowledge of system dynamics (e.g., control affine model).  
                   Both the synthesis and deployment of our Q‑CBF are scalable to high‑dimensional systems and do not require any knowledge of their dynamics.
                 </li>
                 <li class="list-group-item">
-                  We build upon the learned Q‑CBF and demonstrate our <em>human-centered safety filter (HCSF)</em> in Assetto Corsa (AC), a high‑fidelity racing simulator with black‑box dynamics, where the filter is pushed to the limit against all potential failure modes by real human drivers with diverse skill levels.  
+                  We build upon the learned Q‑CBF and demonstrate our HCSF in Assetto Corsa (AC), a high‑fidelity racing simulator with black‑box dynamics, where the filter is pushed to the limit against all potential failure modes by real human drivers with diverse skill levels.  
                   To the best of our knowledge, this is the first time a safety filter has been synthesized, deployed, and evaluated in such a high‑dimensional, dynamic shared autonomy setting involving human operators.
                 </li>
                 <li class="list-group-item">
