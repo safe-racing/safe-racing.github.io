@@ -205,8 +205,8 @@
                     We compare our HCSF against unassisted driving and a last resort safety filter (LRSF)&mdash;a conventional value-based safety filter that switches to the fallback policy when the current state is deemed unsafe.
                     Both trajectory data and the users' subjective responses were used to validate our hypotheses:
                     <ol>
-                        <li>compared to unassisted driving, our HCSF improves safety and satisfaction without compromising human agency and comfort.</li>
-                        <li>compared to LRSF, our HCSF enhances human agency, comfort, and satisfaction while maintaining robustness.</li>
+                        <li><strong>compared to unassisted driving, our HCSF improves safety and satisfaction without compromising human agency and comfort.</strong></li>
+                        <li><strong>compared to LRSF, our HCSF enhances human agency, comfort, and satisfaction while maintaining robustness.</strong></li>
                     </ol>
                     Each participant (N=83) was assigned to one of three assistance modes&mdash;unassisted, LRSF assistance, or HCSF assistance&mdash;and completed three driving sessions.
                     Sessions 1 and 3 were unassisted for everyone; in session 2, only the LRSF and HCSF groups received their respective safety‑filter assistance, while the unassisted group continued without support.
@@ -275,6 +275,7 @@
                     The box plots below show the distributions of average I.D. (squared magnitude of the first-order control input difference) and jerk for all three groups.
                     Notably, our HCSF significantly reduces both average I.D. and jerk compared to LRSF, while its difference from unassisted driving is not statistically significant.
                     This indicates that our HCSF's interventions are smoother and less abrupt than those of LRSF, leading to improved user comfort.
+                    We conjecture that such smooth interventions are due to 1) the Q-CBF safety constraint that delivers more gradual interventions compared to the swithcing behavior of LRSF, and 2) our HCSF anchoring the filtered action around the human's action, which is inherently smooth and continuous.
                 </p>
                 <div class="row justify-content-center text-center mt-4">
                     <div class="col-6 col-sm-4 mb-3">
@@ -302,6 +303,18 @@
                         <img src="img/box_s1s2_and_delta_comfort.png" width="75%" class="img-fluid" alt="Agency responses">
                         <figcaption>Users' perceived comfort across all three groups in sessions 1 and 2.</figcaption>
                     </figure>
+                </p>
+                <p class="text-justify">
+                    Finally, participants assisted by our HCSF in session 2 reported significantly higher satisfaction scores than those in the unassisted and LRSF groups.
+                </p>
+                <p style="text-align:center;">
+                    <figure class="text-center">
+                        <img src="img/box_s1s2_and_delta_satisfaction.png" width="75%" class="img-fluid" alt="Agency responses">
+                        <figcaption>Users' perceived satisfaction across all three groups in sessions 1 and 2.</figcaption>
+                    </figure>
+                </p>
+                <p class="text-justify">
+                    Therefore, we validated both hypotheses using both trajectory data and human participant responses from an extensive human study.
                 </p>
             </div>
         </div>
