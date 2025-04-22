@@ -154,11 +154,11 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                   We introduce, to the best of our knowledge, the <b>first fully model‑free control barrier function (CBF) safety filter</b>.  
-                  We learn a neural safety value function through interactions with a black‑box system and, at deployment, enforce a safety constraint based on a novel state&ndash;action control barrier function (Q‑CBF) without any knowledge of system dynamics (e.g., control affine model).  
+                  We learn a neural safety value function through interactions with a black‑box system and, at deployment, enforce a safety constraint based on a novel <em>state&ndash;action control barrier function (Q‑CBF)</em> without any knowledge of system dynamics (e.g., control affine model).  
                   Both the synthesis and deployment of our Q‑CBF are scalable to high‑dimensional systems and do not require any knowledge of their dynamics.
                 </li>
                 <li class="list-group-item">
-                  We build upon the learned Q‑CBF and demonstrate our HCSF in Assetto Corsa (AC), a high‑fidelity racing simulator with black‑box dynamics, where the filter is pushed to the limit against all potential failure modes by real human drivers with diverse skill levels.  
+                  We build upon the learned Q‑CBF and demonstrate our <em>human-centered safety filter (HCSF)</em> in Assetto Corsa (AC), a high‑fidelity racing simulator with black‑box dynamics, where the filter is pushed to the limit against all potential failure modes by real human drivers with diverse skill levels.  
                   To the best of our knowledge, this is the first time a safety filter has been synthesized, deployed, and evaluated in such a high‑dimensional, dynamic shared autonomy setting involving human operators.
                 </li>
                 <li class="list-group-item">
@@ -176,41 +176,22 @@
             <div class="col-md-10 col-lg-8">
                 <h3 class="mt-4 mb-2">
                     Approach
-                    <!-- This section needs to be rewritten soon -->
                 </h3>
                 <p class="text-justify">
-
-                    Our proposed approach can seamlessly integrate data-driven policies with optimization-based dynamic game solutions. 
-                    Data-driven behavior predictors, such as transformer-based methods, provide <em>marginal</em> (i.e., single-agent) priors
-                    for human motion prediction, but may struggle to model <em>closed-loop</em>, multi-agent interactions.
-                    <!-- RCIP builds upon statistical risk calibration (SRC) to formally quantify and bound multiple notions of
-                    risk in human-robot interaction (HRI).  Using a small set of calibration scenarios, RCIP computes step-wise prediction
-                    losses to form an aggregate emperical risk estimate. Using a risk limit, for each pair (λ,θ) of prediction thresholds
-                    and tunable model parameters, RCIP evaluates the hypothesis that the test set risk is above the limit.
-                    Thus, for all hypotheses that are rejected, the test set risk satisfies the threshold (with high probability). -->
-<!-- 
-                    Our proposed approach can seamlessly integrate data-driven
-                    policies with optimization-based dynamic game solutions.
-                    Data-driven behavior predictors, such as transformer-based methods,
-                    provide marginal (i.e., single-agent) priors for human motion
-                    prediction, but may struggle to model closed-loop, multi-agent
-                    interactions. Whereas our proposed method, KLGame, allows a robot
-                    to incorporate guidance from data-driven rollouts while performing
-                    online game-theoretic planning in closed-loop. KLGame uses
-                    a tunable parameter λ that modulates behaviors on a spectrum: λ = 0
-                    gives a deterministic dynamic game (task-optimal), and λ → ∞ gives
-                    multi-modal behavior cloning. We call this tunability policy blending. -->
-
+                    Our HCSF builds upon a novel Q-CBF safety filter, which is, to the best of our knowledge, the first fully model-free CBF safety filter.
+                    We first prove that the safety value function is a valid discrete-time CBF.
+                    Then, we scalably learn a state&ndash;action safety value function through black-box interations with the system via model-free RL-based Hamilton-Jacobi (HJ) reachability analysis.
+                    At runtime, we leverage the learned state&ndash;action safety value function to enforce a novel Q-CBF safety constraint, which does not require any knowledge of the system dynamics for both safety monitoring and intervention.
+                    Therefore, our Q‑CBF safety filter is fully model‑free&mdash;from synthesis through deployment&mdash;unlocking a wide range of applications for complex, black‑box systems.
                 </p>
                 <p class="text-justify">
-                    KLGame allows a robot to incorporate <em>guidance</em> from data-driven rollouts while 
-                    performing online game-theoretic planning in closed-loop. This method uses a <em>tunable</em> parameter <span>&lambda;</span> 
-                    that modulates behaviors on a spectrum: <span>&lambda;=0</span> gives a deterministic dynamic game (<em>task-optimal</em>), 
-                    and <span>&lambda;&rarr;&infin;</span> gives multi-modal behavior cloning. We call this tunability <em>policy blending</em>.
+                    During deployment, our HCSF solves an optimal control problem (OCP) at each timestep to compute a safe action that minimally deviates from the human's intended action while satisfying the Q-CBF safety constraint.
+                    Thus, our HCSF actively promotes human agency while ensuring the system remains within the maximal safe set.
+                    Whenever an intervention occurs, our HCSF provides visual cues that reflect the intervention magnitude at each input channel, fostering transparent collaboration with the human operator.
                 </p>
 
                 <p style="text-align:center;">
-                    <image src="img/fig2_master_simplified.png" width="100%"></image>
+                    <image src="img/saferacing_rss25_figures.005.png" width="100%"></image>
 <!--                    <embed type="application/pdf" src="img/figure1_tricolumn-compressed.pdf"></embed>-->
                 </p>
                 <!-- Put a better overview here -->
@@ -258,11 +239,11 @@
                 </h3>
                 <pre><code class="codeblock">
                     @inproceedings{oh2025safety,
-                        title={Safety with Agency: Human-Centered Safety Filter with Application to AI-Assisted Motorsports},
-                        author={Oh, Donggeon David and Lidard, Justin and Hu, Haimin and Sinhmar, Himani and Lazarski, Elle and Gopinath, Deepak and Sumner, Emily S and DeCastro, Jonathan A and Rosman, Guy and Leonard, Naomi Ehrich and and Fisac, Jaime Fern{\'a}ndez},
-                        journal={Proceedings of Robotics: Science and Systems},
-                        year={2025}
-                      }
+                                    title={Safety with Agency: Human-Centered Safety Filter with Application to AI-Assisted Motorsports},
+                                    author={Oh, Donggeon David and Lidard, Justin and Hu, Haimin and Sinhmar, Himani and Lazarski, Elle and Gopinath, Deepak and Sumner, Emily S and DeCastro, Jonathan A and Rosman, Guy and Leonard, Naomi Ehrich and and Fisac, Jaime Fern{\'a}ndez},
+                                    journal={Proceedings of Robotics: Science and Systems},
+                                    year={2025}
+                                }
                 </code></pre>
             </div>
         </div>
