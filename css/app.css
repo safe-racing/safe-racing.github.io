@@ -182,3 +182,8 @@ pre.codegen {
   height: 150px;               /* uniform RSS height */ 
   width: auto;                /* preserves aspect ratio */ 
 }
+
+h3 {
+  font-size: 1.2rem;
+  font-family: 'Lato', sans-serif;
+}
