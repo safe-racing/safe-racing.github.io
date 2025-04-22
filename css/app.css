@@ -173,11 +173,11 @@ pre.codegen {
 
 /* Fix Princeton & TRI logos to 110px high, width auto */
 .logo-img {
-  height: 110px;              /* sets a uniform height */ 
+  height: 120px;              /* sets a uniform height */ 
   width: auto;                /* maintains aspect ratio */ 
 }
 
 .rss-logo-img {
-  height: 110px;               /* uniform RSS height */ 
+  height: 150px;               /* uniform RSS height */ 
   width: auto;                /* preserves aspect ratio */ 
 }
