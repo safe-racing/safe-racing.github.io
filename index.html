@@ -139,18 +139,12 @@
                         <source src="videos/safety_with_agency_short_compressed.mp4" type="video/mp4">
                     </video>
                 </div>
-                <!-- <p style="text-align:center;">
-                    <image src="img/fig1_rss_real_scenarios.png" width="75%"></image>
-                </p> -->
-
             </div>
         </div>
 
         <div class="row justify-content-md-center">
             <div class="col-md-10 col-lg-8">
               <h3 class="mt-4 mb-2">Contributions</h3>
-          
-              <!-- Bullet‑point list of contributions -->
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                   We introduce, to the best of our knowledge, the <b>first fully model‑free control barrier function (CBF) safety filter</b>.  
@@ -189,7 +183,34 @@
                     Thus, our HCSF actively promotes human agency while ensuring the system remains within the maximal safe set.
                     Whenever an intervention occurs, our HCSF provides visual cues that reflect the intervention magnitude at each input channel, fostering transparent collaboration with the human operator.
                 </p>
+                <p style="text-align:center;">
+                    <image src="img/saferacing_rss25_figures.005.png" width="100%"></image>
+                </p>
+            </div>
+        </div>
 
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 col-lg-8">
+                <h3 class="mt-4 mb-2">
+                    Results
+                </h3>
+                <p class="text-justify">
+                    We conducted a large-scale user study in an AI-assisted car racing environment using AC to assess the robustness of our HCSF and how human operators perceive its interventions.
+                    We compare our HCSF against unassisted driving and a last resort safety filter (LRSF)&mdash;a conventional value-based safety filter that switches to the fallback policy when the current state is deemed unsafe.
+                    Both trajectory data and the users' subjective responses were used to validate our hypotheses:
+                    <ol>
+                        <li>compared to unassisted driving, our HCSF improves safety and satisfaction without compromising human agency and comfort.</li>
+                        <li>compared to LRSF, our HCSF boosts human agency, comfort, and satisfaction while maintaining robustness.</li>
+                    </ol>
+                    Each of the 83 participants was assigned to one of three types of AI assistance&mdash;unassisted, LRSF, or HCSF&mdash;and completed three driving sessions.
+                    Sessions 1 and 3 were unassisted for everyone; in session 2, only the LRSF and HCSF groups received their respective safety‑filter assistance, while the unassisted group continued without support.
+                    This study involved participants coming from diverse backgrounds, marking the first time the interaction between human operators and safety filters has been systematically investigated.
+                </p>
+                <p class="text-justify">
+                    Our HCSF achieved near-zero failures throughout the user study, demonstrating significant enhancement in safety compared to unassisted driving. 
+                    Although our HCSF outperformed LRSF in both failure modes (i.e., out-of-track incidents and collisions), the differences were not statistically significant.
+                    In the figures below, statistical significance is indicated by asterisks (*: p &lt; 0.05; **: p &lt; 0.01; ***: p &lt; 0.001).
+                </p>
                 <p style="text-align:center;">
                     <image src="img/saferacing_rss25_figures.005.png" width="100%"></image>
                 </p>
