@@ -172,8 +172,12 @@ pre.codegen {
 }
 
 /* Fix Princeton & TRI logos to 110px high, width auto */
-.logo-img {
+.logo-PU-img {
   height: 120px;              /* sets a uniform height */ 
+  width: auto;                /* maintains aspect ratio */ 
+}
+.logo-TRI-img {
+  height: 140px;              /* sets a uniform height */ 
   width: auto;                /* maintains aspect ratio */ 
 }
 
