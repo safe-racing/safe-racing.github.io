@@ -203,3 +203,8 @@ h3 {
 figcaption {
   font-size: 1.0rem;
 }
+
+html,
+body {
+  background-color: #ffffff !important;
+}
